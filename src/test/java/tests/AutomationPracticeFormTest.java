@@ -39,9 +39,9 @@ public class AutomationPracticeFormTest {
 
         //Date of Birth
         $("#dateOfBirthInput").click();
-            $(".react-datepicker__month-select").selectOptionByValue("10");
-            $(".react-datepicker__year-select").selectOptionByValue("1996");
-            $(".react-datepicker__day--020").click();
+        $(".react-datepicker__month-select").selectOptionByValue("10");
+        $(".react-datepicker__year-select").selectOptionByValue("1996");
+        $(".react-datepicker__day--020").click();
 
         // Subjects
         $("#subjectsInput").setValue("English").pressEnter();
