@@ -1,6 +1,5 @@
 package tests;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -31,7 +30,7 @@ public class AutomationPracticeFormTest {
         $("#userEmail").setValue("kov.sfa@gmail.com");
 
         // Gender
-        $("label[for='gender-radio-2']").click();
+        $("#genterWrapper").$(byText("Female")).click();
 
         // Phone number
         $("#userNumber").setValue("7058745235");
@@ -46,10 +45,10 @@ public class AutomationPracticeFormTest {
         $("#subjectsInput").setValue("English").pressEnter();
 
         // Hobby
-        $("label[for='hobbies-checkbox-1']").click();
+        $("#hobbiesWrapper").$(byText("Sports")).click();
 
         // Upload picture
-        $("#uploadPicture").uploadFile(new File("src/test/resources/cat.jpg"));
+        $("#uploadPicture").uploadFromClasspath("cat.jpg");
 
         // Address
         $("#currentAddress").setValue("Baribaeva street");
